@@ -51,6 +51,7 @@ main {
     display: flex;
     align-items: center;
     list-style: none;
+    color: #fff;
 }
 
 .navbar__item {
@@ -310,6 +311,17 @@ body {
      width: 100%;
 }
 
+@media screen and(max-width: 768px) {
+    .hero__heading {
+        font-size: 40px;
+    }
+
+    .hero__description {
+        font-size: 40px;
+    }
+}
+
+
   /* About section */
   .main {
     
@@ -428,6 +440,74 @@ body {
       background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      
   }
+
+  /* Mobile Responsive */
+@media screen and (max-width: 1100px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .main__img--container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__img--card {
+        height: 425px;
+        width: 425px;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5 rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__img--card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+    }
+
+    .main__btn {
+        padding: 12px 36ox;
+        margin: 2.5rem 0;
+    }
+
+}
   
   .fa-solid fa-kabba, .fa-users {
       font-size: 14 rem;
@@ -696,4 +776,37 @@ background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+
 .website__rights {
     color: #fff;
 }
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+       padding-top: 2rem;
+    }
+
+    #footer__logo {
+       margin-bottom: 2rem;
+    }
+
+    .website__rights {
+       margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+       flex-direction: column;
+    }
+
+    .social__media--wrap {
+       flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+   .footer__link--items {
+       margin: 0;
+       padding: 10px;
+       width: 100%;
+   }
+}
+
+
   
