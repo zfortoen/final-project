@@ -54,6 +54,10 @@ main {
     color: #fff;
 }
 
+.bar{
+    color: #fff;
+}
+
 .navbar__item {
     height: 80px;
 }
@@ -97,6 +101,15 @@ main {
     color: #fff;
     transition: all 0.3s ease;
 }
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    color: #fff;
+}
+
 
 .navbar__links:hover {
     background: #2980B9;  /* fallback for old browsers */
@@ -177,16 +190,23 @@ main {
         margin: 0;
     }
 
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+
     #mobile-menu {
         position: absolute;
         top: 20%;
         right: 5%;
         transform: translate(5%, 20%);
+        color: #fff;
     }
 
     .navbar__toggle .bar {
         display: block;
         cursor: pointer;
+        color: #fff;
     }
 
     #mobile-menu.is-active .bar:nth-child(2) {
@@ -593,17 +613,28 @@ background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+
 }
 
 .services__card button {
-    color: #fff;
-    padding: 14px 24px;
+    font-size: 1.8 rem;
+    background: #0b0a0a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
     border: none;
-    outline: none;
     border-radius: 4px;
-    background: #131313;
-    font-size: 1rem;
+    color: #fff;
+    margin-top: 2 rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-decoration: none;
 }
 
+
 .services__card button:hover {
-    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
 }
 
 .services__card:hover {

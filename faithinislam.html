@@ -1,0 +1,504 @@
+<!--navbar section-->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Masjid Al Taqwah</a>
+        <div class="navbar__toggel" id="moblie-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu"> 
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links" id="home-page">home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="about.html" class="navbar__links" id="about-page">about</a>
+            </li>
+             <li class="navbar__item"> 
+                <a href="contact.html" class="navbar__links" id="services-page">contact</a>
+            </li>
+        </li>
+        <li class="navbar__item"> 
+            <a href="gallery.html" class="navbar__links" id="services-page">gallery</a>
+        </li>
+            <li class="navbar__btn">
+                <a href="sign-up.html" class="button" id="signup">sign up</a>
+            </li>
+         </ul>
+    </div>
+</nav>
+
+
+<style>
+    main {
+    box-sizing :border-box;
+    margin :0;
+    padding :0;
+    font-family: kumbh Sans' , sans-serif ;
+    scroll behavior smooth ;
+}
+
+.navbar {
+    background-color: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} 
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+
+
+}
+
+#navbar__logo {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2 rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #fff;
+}
+
+.bar{
+    color: #fff;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3 ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin:4px  2px ;
+    font-size: 16px;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    color: #fff;
+}
+
+
+.navbar__links:hover {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;  
+        transition: all 0.5s ease;
+        z-index: -1;
+        background: #131313;
+        
+    }
+
+    .navbar__menu.active {
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        color: #fff;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/05/1e/f3/051ef3a3aa5a1556a32813a6039ff60a.jpg);
+  }
+
+  .main__btn {
+    font-size: 1.8 rem;
+    background: #0b0a0a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2 rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-decoration: none;
+}
+</style>
+
+<style>
+    .about {
+      text-align: center;
+    }
+
+  </style>
+
+<style>
+    h2 {
+        justify-content: center;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+    
+    h4{
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+  </style>
+
+  <nav class="Faith in Islam">
+    <h2>Faith in Islam</h2>
+
+    <h4>
+        In Islam, a believer's faith in the metaphysical aspects of Islam is called Iman (Arabic: الإيمان), which is complete submission to the will of God, not unquestioning or blind belief. A man must build his faith on well-grounded convictions beyond any reasonable doubt and above uncertainty. According to the Quran, Iman must be accompanied by righteous deeds and the two together are necessary for entry into Paradise. In the Hadith of Gabriel, Iman in addition to Islam and Ihsan form the three dimensions of the Islamic religion.
+        The basis of any religion is faith. Faith is not merely conviction of the truth of a given principle, but it is essentially the acceptance of a principle as a basis for action. Without faith, a man is like a car without a steering wheel, drifting aimlessly upon a sea of doubt and confusion.
+
+What is faith in Islam? It is belief in the Unity of God or Tawheed. This is expressed in the primary Kalimah (Word) of Islam as: “Laa ilaaha illallaah", meaning: “There is no one worthy of worship but Allah.”
+
+This beautiful phrase is the bedrock of Islam, its foundation and its essence. It is the expression of this belief, which differentiates a true Muslim from an unbeliever, or one who associates others with God in His Divinity.
+
+The acceptance or denial of this phrase produces a world of difference among human beings. The believer finds out the right path, knows the truth and chalks out the course of life in the light of reality; the unbeliever chases one illusion after the other and gropes into the dark. For the believers, there is the promise of unhampered progress and resounding success in this world and in the Hereafter; whereas failure and ignominy are ultimately the lot of those who refuse to believe in it.
+
+In fact, Tawheed is a revolutionary concept, a tremendously forceful doctrine and is the very starting-point of Islam.
+However, the difference between believers and unbelievers is not the result of merely uttering a few words. The real force lies in the conscious acceptance of this doctrine and its stipulations and complete adherence to it in practical life.
+
+The meaning of: “There is no one worthy of worship but Allah”:
+
+In Arabic, the word ‘Ilaah’ means 'one who is worshipped', i.e., a Being which on account of its Greatness and Power is considered worthy to be worshipped, to be bowed to in love, humility and submission. Anything or any being possessing powers too great to be comprehended by man is also called Ilaah. The concept of Ilaah also includes the possession of infinite powers that may astonish others. It also conveys the sense that others are dependent upon Ilaah and He is not dependent upon any one else.
+
+It appears from humankind’s ancient history and the oldest relics of antiquity that we have been able to obtain, that in every age, man had recognized some deity or deities and worshipped them. Even in the present age, every nation on the face of the earth -- from the most primitive to the most civilized -- believes in and worships some deity. It shows that the idea of having a deity and of worshipping is ingrained in human nature. There is something within man's soul, which forces him to do so.
+
+Acceptance of the doctrine of Unity of God is what is termed faith in Islam. However, faith in the Islamic sense is not merely intellectual assent to a certain dogma or a subjective emotional response to a great personality, but a volitional and dynamic reaction to belief in one God, Who stands for the highest perfection and belief in the Hereafter -- a belief that fully assimilates both intellectual and emotional responses. It is at once an affirmation of a truth and a surrender to the truth affirmed.
+
+Intellectual apprehension plays an important part in Islamic faith. The Quran, in several places, appeals to human reason in arriving at true belief. It says (what means):
+"And thus do We explain the Signs in various ways that the truth may become established and that they may say: "Thou hast read out what thou hast learnt' and that We may explain it to a people who have knowledge." [Quran 6: 106]
+
+Addressing the unbelievers, the Quran asks (what means): "Those who associate gods with Allah say: 'If Allah had pleased, we would not have associated gods with Him, nor would our fathers, nor would we have made anything unlawful.' In like manner did those who were before them accuse God's Messenger of falsehood, until they tasted of Our wrath. Say: "Have you any knowledge? Then produce it for us. You only follow mere conjecture. And you only tell lies." [Quran 6: 149]
+
+"Surely, the worst of beasts in the sight of Allah are the deaf and the dumb, who have no sense." [Quran 8: 32]
+
+The faith in which knowledge, emotion and will are all involved, is manifested not in the form of a doctrine or dogma, but in the form of an ideal value.
+
+Faith in Islam is the moral ground and basis for action and not a dogmatic assertion of salvation-justification like Christianity. The well-being of man, therefore, depends upon faith that is accompanied by good actions.
+
+Thus, faith is firm belief arising out of knowledge and unshakable conviction in the Unity of Allah, in His Attributes and revealed guidance. One who believes as such is called Mu'min (faithful).
+
+This faith invariably leads man to a life of obedience and submission to the Will of Allah, and a person who lives this life of submission is known as a Muslim. Thus, we find that faith is the starting point that leads man to a life of submission to Allah, and that a man cannot become a Muslim without faith.
+
+The Unity of God is the most fundamental concept in Islam.
+
+The first step in discussing the concept of faith in Islam is to establish the existence of God, because if He does not exist there is no question of believing in Him. Therefore, the proof of existence of Allah is the basis of the whole concept of Islamic faith
+    </h4>
+  </nav>
+
+
+
+  <!-- footer section -->
+<div class="footer__container">
+    <div class="footer__links">
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+            <h2>About us</h2>
+            <a href="/sign-up">How it Works</a>
+            <a href="/sign-up">Testimonials</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        <div class="footer__link--items">
+            <h2>contact us</h2>
+            <a href="/sign-up">zaidafortoen5@gmail.com</a>
+            <a href="/sign-up">+27 74 476 6212</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        </div>
+        <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/sign-up">How it Works</a>
+            <a href="/sign-up">Testimonials</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/sign-up">instagram</a>
+            <a href="/sign-up">facebook</a>
+            <a href="/sign-up">whatsapp</a>
+        </div>
+    </div>
+       </div>
+         <section class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo">Masjid Al Taqwah</a>
+                </div>
+                <p class="website__rights">Masjid Al Taqwah 2024. All rights resvered</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icon--link" target="_blank"
+                    ><i class="fab fa-facebook"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-instagram"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-youtube"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-linkedin"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+         </section>
+    </div>
+   </div>
+
+   <style>
+    /* footer CSS */
+ .footer__container {
+    background-color: #131313;
+    padding: 5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: center;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: 0.3 ease-out;
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+    transition: 0.3 ease-out;
+}
+
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.socail__media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.website__rights {
+    color: #fff;
+}
+  
+
+   </style>

@@ -27,3 +27,322 @@
          </ul>
     </div>
 </nav>
+
+<style>
+    main {
+    box-sizing :border-box;
+    margin :0;
+    padding :0;
+    font-family: kumbh Sans' , sans-serif ;
+    scroll behavior smooth ;
+}
+
+.navbar {
+    background-color: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} 
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+
+
+}
+
+#navbar__logo {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2 rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #fff;
+}
+
+.bar{
+    color: #fff;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3 ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin:4px  2px ;
+    font-size: 16px;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    color: #fff;
+}
+
+
+.navbar__links:hover {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;  
+        transition: all 0.5s ease;
+        z-index: -1;
+        background: #131313;
+        
+    }
+
+    .navbar__menu.active {
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        color: #fff;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/05/1e/f3/051ef3a3aa5a1556a32813a6039ff60a.jpg);
+  }
+
+  .main__btn {
+    font-size: 1.8 rem;
+    background: #0b0a0a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2 rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-decoration: none;
+}
+</style>
+
+<style>
+    .about {
+      text-align: center;
+    }
+
+  </style>
+
+  <style>
+    h2 {
+        justify-content: center;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+    
+    h4{
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+  </style>
+
+  <nav class="history">
+       <h2> History Of Islam</h2>
+
+    <h4>
+        The history of Islam concerns the political, social, economic, military, and cultural developments of the Islamic civilization. Most historians believe that Islam originated with Muhammad's mission in Mecca and Medina at the start of the 7th century CE, although Muslims regard this time as a return to the original faith passed down by the Abrahamic prophets, such as Adam, Noah, Abraham, Moses, David, Solomon, and Jesus, with the submission (Islām) to the will of God.
+
+According to the traditional account, the Islamic prophet Muhammad began receiving what Muslims consider to be divine revelations in 610 CE, calling for submission to the one God, preparation for the imminent Last Judgement, and charity for the poor and needy. As Muhammad's message began to attract followers (the ṣaḥāba) he also met with increasing hostility and persecution from Meccan elites. In 622 CE Muhammad migrated to the city of Yathrib (now known as Medina), where he began to unify the tribes of Arabia under Islam, returning to Mecca to take control in 630 and order the destruction of all pagan idols.By the time Muhammad died c. 11 AH (632 CE), almost all the tribes of the Arabian Peninsula had converted to Islam, but disagreement broke out over who would succeed him as leader of the Muslim community during the Rashidun Caliphate.
+
+The early Muslim conquests were responsible for the spread of Islam.By the 8th century CE, the Umayyad Caliphate extended from Iberian Al-Andalus in the west to the Indus River in the east. Polities such as those ruled by the Umayyad and Abbasid caliphates (in the Middle East and later in Spain and Southern Italy), the Fatimids, Seljuks, Ayyubids, and Mamluks were among the most influential powers in the world. Highly Persianized empires built by the Samanids, Ghaznavids, and Ghurids significantly contributed to technological and administrative developments. The Islamic Golden Age gave rise to many centers of culture and science and produced notable polymaths, astronomers, mathematicians, physicians, and philosophers during the Middle Ages.
+
+By the early 13th century, the Delhi Sultanate conquered the northern Indian subcontinent, while Turkic dynasties like the Sultanate of Rum and Artuqids conquered much of Anatolia from the Byzantine Empire throughout the 11th and 12th centuries. In the 13th and 14th centuries, destructive Mongol invasions, along with the loss of population due to the Black Death, greatly weakened the traditional centers of the Muslim world, stretching from Persia to Egypt, but saw the emergence of the Timurid Renaissance and major economic powers such as the Mali Empire in West Africa and the Bengal Sultanate in South Asia. Following the deportation and enslavement of the Muslim Moors from the Emirate of Sicily and elsewhere in southern Italy, the Islamic Iberia was gradually conquered by Christian forces during the Reconquista. Nonetheless, in the early modern period, the gunpowder empires—the Ottomans, Timurids, Mughals, and Safavids—emerged as world powers.
+
+During the 19th and early 20th centuries, most of the Muslim world fell under the influence or direct control of the European Great Powers. Some of their efforts to win independence and build modern nation-states over the course of the last two centuries continue to reverberate to the present day, as well as fuel conflict-zones in regions such as Palestine, Kashmir, Xinjiang, Chechnya, Central Africa, Bosnia, and Myanmar. The oil boom stabilized the Arab States of the Gulf Cooperation Council (comprising Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, and the United Arab Emirates), making them the world's largest oil producers and exporters, which focus on capitalism, free trade, and tourism
+    </h4>
+  </nav>
+
+  <nav class="Early sources and Historiography">
+    <h2>Early sources and Historiography</h2>
+    
+    <h4>
+        The study of the earliest periods in Islamic history is made difficult by a lack of sources. For example, the most important historiographical source for the origins of Islam is the work of al-Tabari. While al-Tabari is considered an excellent historian by the standards of his time and place, he made liberal use of mythical, legendary, stereotyped, distorted, and polemical presentations of subject matter—which are however considered to be Islamically acceptable—and his descriptions of the beginning of Islam post-date the events by several generations, al-Tabari having died in 923 CE.
+
+Differing views about how to deal with the available sources has led to the development of four different approaches to the history of early Islam. All four methods have some level of support today.
+
+The descriptive method uses the outlines of Islamic traditions, while being adjusted for the stories of miracles and faith-centred claims within those sources. Edward Gibbon and Gustav Weil represent some of the first historians following the descriptive method.
+On the source critical method, a comparison of all the sources is sought in order to identify which informants to the sources are weak and thereby distinguish spurious material. The work of William Montgomery Watt and that of Wilferd Madelung are two source critical examples.
+On the tradition critical method, the sources are believed to be based on oral traditions with unclear origins and transmission history, and so are treated very cautiously. Ignaz Goldziher was the pioneer of the tradition critical method, and Uri Rubin gives a contemporary example.
+The skeptical method doubts nearly all of the material in the traditional sources, regarding any possible historical core as too difficult to decipher from distorted and fabricated material. An early example of the sceptical method was the work of John Wansbrough.
+Nowadays, the popularity of the different methods employed varies on the scope of the works under consideration. For overview treatments of the history of early Islam, the descriptive approach is more popular. For scholars who look at the beginnings of Islam in depth, the source critical and tradition critical methods are more often followed.[30]
+
+After the 8th century CE, the quality of sources improves. Those sources which treated earlier times with a large temporal and cultural gap now begin to give accounts which are more contemporaneous, the quality of genre of available historical accounts improves, and new documentary sources—such as official documents, correspondence and poetry—appear. For the time prior to the beginning of Islam—in the 6th century CE—sources are superior as well, if still of mixed quality. In particular, the sources covering the Sasanian realm of influence in the 6th century CE are poor, while the sources for Byzantine areas at the time are of a respectable quality, and complemented by Syriac Christian sources for Syria and Iraq.[37]
+
+Until the early 1970s, Non-Muslim scholars of Islamic studies—while not accepting accounts of divine intervention—did accept its origin story in most of its details. On the dates said, historians called Revisionist school of Islamic studies began to use relevant archaeology, epigraphy, numismatics and contemporary non-Arabic literature to crosscheck writings from 150 to 250 years after Muhammad. The school included scholars such as John Wansbrough and his students Andrew Rippin, Norman Calder, G. R. Hawting, Patricia Crone and Michael Cook, as well as Günter Lüling, Yehuda D. Nevo and Christoph Luxenberg. These studies yielded the following results:
+
+Islam did not rise among polytheistic pagans in Mecca, but in a milieu where Jewish and Christian texts were well-known. The infidels or Kafirun described in the Qur'an were not pagan polytheists but rather Jews and Christians who were polemically deviated from monotheism. In the early period of Islam, Jews were "believers" and considered a part of the ummah. Anti-Jewish texts, such as the story about the massacre of the Jewish tribe at Banu Qurayza, appeared after Islam split from Judaism, long after Muhammad's death.
+Mecca was not a settlement, nor an important commercial center for thousands of years before Islam as is claimed in traditional Islamic sources. In addition, the geographical descriptions in the Quran and later hadiths did not match Mecca. Rather, these sources pointed to somewhere in north-western Arabia, e.g. Petra in Jordan.
+The period that is today called early Islamic history was probably not an Islamic, religiously motivated conquest but a secular Arab invasion.
+
+
+    </h4>
+  </nav>
