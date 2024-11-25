@@ -1,0 +1,580 @@
+<!--navbar section-->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Masjid Al Afiyah</a>
+        <div class="navbar__toggel" id="moblie-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu"> 
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links" id="home-page">home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="about.html" class="navbar__links" id="about-page">about</a>
+            </li>
+             <li class="navbar__item"> 
+                <a href="contact.html" class="navbar__links" id="services-page">contact</a>
+            </li>
+        </li>
+        <li class="navbar__item"> 
+            <a href="gallery.html" class="navbar__links" id="services-page">gallery</a>
+        </li>
+            <li class="navbar__btn">
+                <a href="sign-up.html" class="button" id="signup">sign up</a>
+            </li>
+         </ul>
+    </div>
+</nav>
+
+
+<style>
+    main {
+    box-sizing :border-box;
+    margin :0;
+    padding :0;
+    font-family: kumbh Sans' , sans-serif ;
+    scroll behavior smooth ;
+}
+
+.navbar {
+    background-color: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} 
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+
+
+
+}
+
+#navbar__logo {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2 rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #fff;
+}
+
+.bar{
+    color: #fff;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3 ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin:4px  2px ;
+    font-size: 16px;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+    color: #fff;
+}
+
+
+.navbar__links:hover {
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;  
+        transition: all 0.5s ease;
+        z-index: -1;
+        background: #131313;
+        
+    }
+
+    .navbar__menu.active {
+        background: #fff;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        color: #fff;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/05/1e/f3/051ef3a3aa5a1556a32813a6039ff60a.jpg);
+  }
+
+  .main__btn {
+    font-size: 1.8 rem;
+    background: #0b0a0a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2 rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-decoration: none;
+}
+</style>
+
+<style>
+    .about {
+      text-align: center;
+    }
+
+  </style>
+
+<style>
+    h3 {
+        justify-content: center;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+    
+    h4{
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 50px;
+        color: black;
+        background-color: rgb(255, 255, 255, 0.478);
+
+    }
+  </style>
+
+  <nav class="islamic Etiquette">
+    <h3> Understanding the Etiquettes of Islamic 
+    </h3>
+
+    <h4>In this fast-paced world, where social norms and behaviors are constantly evolving, it becomes crucial for us to revisit the age-old principles that guide our actions and interactions. This is especially true when it comes to matters of faith and spirituality. For Muslims around the globe, adhering to the etiquettes of Islam is not only a religious obligation but also a way of embodying their faith in everyday life.
+
+        Good manners hold immense importance in Islam, as they reflect an individual’s character and his or her relationship with both Allah and fellow human beings. Understanding this significance lays the foundation for practicing proper Islamic manners – a concept known as “Adab”.
+        
+        So, let’s delve deeper into the core values, principles, and examples that define these etiquettes to better comprehend how we can incorporate them into our daily lives. Whether it’s through small gestures or meaningful interactions, embracing these teachings will undoubtedly lead us towards becoming better individuals within our communities</h4>
+  </nav>
+
+  <nav class="islamic Etiquette">
+    <h3>Understanding the Importance of Good Manners in Islam</h3>
+
+    <h4>
+        The Importance of Good Manners in Islam:<br>
+
+1. Reflecting Faith:<br>
+Good manners are considered an integral part of practicing Islam, as they reflect a person’s faith and devotion to Allah. It is believed that those who possess good manners have a deeper connection with their Creator.<br>
+
+2. Enhancing Relationships:<br>
+Islamic etiquettes emphasize the importance of treating others with kindness, respect, and compassion. By embodying these principles in our interactions, we can foster harmonious relationships within our families, communities, and society at large.<br>
+
+3. Strengthening Community Bonds:<br>
+The etiquettes of Islam encourage Muslims to be actively engaged members of their community. Through acts of kindness and consideration towards others, individuals contribute to the overall well-being and unity within their community.<br>
+
+4. Setting Examples for Others:<br>
+Practicing good manners not only benefits oneself but also serves as a source of inspiration for others around us. When we demonstrate respectful behavior in our daily lives, it encourages others to follow suit and promotes positive change within society.<br>
+
+5. Attaining Spiritual Rewards:<br>
+In Islam, every action performed with sincerity and according to the teachings holds spiritual significance. Engaging in polite conduct towards others brings blessings from Allah and earns rewards both in this life and the hereafter.<br>
+
+By understanding the profound importance that good manners hold in Islam, we gain insight into how they shape our character development as Muslims. These values pave the way for fulfilling relationships with fellow human beings while fostering personal growth on a spiritual level
+    </h4>
+  </nav>
+
+  <nav class="islamic Etiquette">
+    <h3>The concept of abad in islam</h3>
+
+    <h4>
+        Adab is a fundamental concept in Islam that encompasses proper etiquette, manners, and conduct. It goes beyond simple politeness and extends to all aspects of life. Adab is deeply rooted in Islamic teachings and serves as a guide for Muslims on how to behave ethically and respectfully.
+
+Adab can be seen as an expression of gratitude towards Allah and a way to show reverence for His creations. It is believed that practicing good adab leads to spiritual growth, strengthens relationships, fosters unity within the community, and ultimately brings one closer to Allah.
+
+In Islam, adab extends not only to interactions with fellow human beings but also includes respect for the environment, animals, and even inanimate objects. It emphasizes humility, patience, kindness, empathy, honesty, forgiveness, and sincerity.
+
+Muslims are encouraged to practice adab in their daily lives through various actions such as saying “Bismillah” before starting any task or endeavoring to begin by reciting the Quran. They are also advised to use gentle words when speaking with others and avoid harsh language or gossip.
+
+Furthermore, “Salaam” is commonly used as a greeting among Muslims which means “peace be upon you.” This greeting reflects the values of love peace, hospitality, and goodwill that should permeate their interactions with others.
+
+By embodying these principles of adab both privately and publicly, Muslims strive towards creating harmony, respecting diversity, and maintaining strong bonds within their communities. Adab also encourages individuals to be mindful of their actions and intentions, recognizing that they are accountable for their deeds in the sight of Allah.
+
+In summary, adab is an integral part of Islamic teachings that promotes a harmonious and ethical way of life. It serves as a reminder for Muslims to always strive towards being kind, respectful, and compassionate towards others, and to always maintain a strong connection with Allah. 
+    </h4>
+  </nav>
+
+  <nav class="Islamic Etiquette">
+    <h3>Core Values and Principles of the Etiquettes of Islam</h3>
+
+    <h4>Understanding the Core Values and Principles of the Etiquette of Islam is essential for every Muslim. These principles guide Muslims in their daily interactions and help create a harmonious society based on respect, compassion, and righteousness.
+
+        One of the core values in Islamic etiquette is sincerity. Muslims are taught to perform acts of kindness and good deeds solely for the sake of pleasing Allah, rather than seeking recognition or praise from others. This fosters humility and selflessness in individuals.
+        
+        Honesty is highly valued in Islam. Muslims are encouraged to always speak the truth and be trustworthy in their dealings with others. Honesty promotes trustworthiness within communities and strengthens bonds between individuals.
+        
+        Furthermore, patience plays an integral role in Islamic etiquette. Patience helps believers endure trials and tribulations with grace while maintaining a positive attitude. It teaches Muslims to control their anger or frustration when faced with challenging situations.
+        
+        Respect for elders holds great significance as well. In Islam, showing reverence towards older individuals is considered honorable behavior. Younger generations are expected to display kindness, obedience, and care towards their elders as a way of upholding family values.
+        
+        Forgiveness is another key principle within Islamic etiquette. Forgiving those who have wronged us enables us to let go of grudges or resentment that may hinder personal growth or relationships with others.
+        
+        By embracing these core values and principles of Islamic etiquettes into our lives, we can foster unity within our communities while striving towards becoming better human beings guided by faith</h4>
+  </nav>
+
+  <nav class="islamic etiquette">
+    <h3>Examples of Proper Islamic Manners: From Daily Practices to Interpersonal Relationships</h3>
+
+    <h4>1. Daily Practices:<br>
+        – Greeting with As-Salamu Alaykum (peace be upon you) and responding with Wa-Alaykum As-Salam (and peace be upon you).<br>
+        – Saying Bismillah (in the name of Allah) before starting any activity, such as eating or entering a room.<br>
+        – Seeking forgiveness from Allah by saying Astaghfirullah (I seek forgiveness from Allah) for any mistakes or sins committed.<br>
+        
+        2. Personal Hygiene:<br>
+        – Performing ablution (wudu) before prayer, which involves washing hands, face, arms, and feet.<br>
+        – Keeping oneself clean and maintaining good personal hygiene at all times.<br>
+        
+        3. Respectful Behavior:<br>
+        – Speaking politely and using kind words when interacting with others.<br>
+        – Respecting elders by standing up to greet them and listening attentively when they speak.<br>
+        
+        4. Social Etiquettes:<br>
+        – Being generous by giving charity and helping those in need.<br>
+        – Visiting the sick and offering prayers for their recovery.<br>
+        
+        5. Family Relations:<br>
+        – Showing love, respect, and obedience towards parents.<br>
+        – Treating siblings kindly and resolving conflicts amicably.<br>
+        
+        Incorporating these etiquettes into our daily lives promotes harmony within ourselves as well as in our relationships with others. These practices reflect the core values of Islam: compassion, humility, patience, justice, honesty, and mercy.
+        
+        <br>By following these examples of proper Islamic manners, every individual can contribute to building a society that is characterized by kindness, respect, and empathy.
+        
+        <br>By practicing good manners based on Islamic principles we can create an environment where everyone feels valued, dignified, and loved</h4>
+  </nav>
+
+  <nav class="Islamic Etiquette">
+    <h3>How to Incorporate Islamic Etiquettes into Daily Life</h3>
+
+    <h4>
+        1. Start with Intention: Every action we take should be done to please Allah and follow His commandments. Before beginning any task, whether it’s eating, working, or interacting with others, make a conscious effort to have a pure intention.<br>
+
+2. Seek Knowledge: Learning about the etiquettes of Islam is essential in incorporating them into our daily lives. Attend Islamic classes or workshops that focus on teaching proper manners and conduct according to Islamic teachings. This will help us better understand how to apply these etiquettes in different situations.<br>
+
+3. Practice Gratitude: Expressing gratitude is an important aspect of Islamic manners. Take time each day to reflect on your blessings and thank Allah for them. Develop the habit of saying “Alhamdulillah” (Praise be to Allah) frequently throughout the day as a reminder of gratitude.<br>
+
+4. Be Mindful of Speech: The way we speak can greatly impact our relationships and interactions with others. Islam emphasizes speaking kindly and avoiding harmful speech such as gossip, backbiting, or lying. Strive to choose your words carefully and speak positively at all times.<br>
+
+5. Establish Routine Acts of Worship: Incorporating routine acts of worship like praying five times a day, reciting the Quran regularly, giving charity, and fasting during Ramadan helps purify our hearts and strengthens our connection with Allah. These acts not only enhance our spirituality but also promote good manners by instilling self-discipline, patience, and compassion within us.<br>
+
+By consciously implementing these practices in our daily lives consistently over time, the etiquettes of Islam become ingrained habits that shape character and improve relationships with both Allah and fellow human beings
+    </h4>
+  </nav>
+
+   <!-- footer section -->
+<div class="footer__container">
+    <div class="footer__links">
+       <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+            <h2>About us</h2>
+            <a href="/sign-up">How it Works</a>
+            <a href="/sign-up">Testimonials</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        <div class="footer__link--items">
+            <h2>contact us</h2>
+            <a href="/sign-up">zaidafortoen5@gmail.com</a>
+            <a href="/sign-up">+27 74 476 6212</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        </div>
+        <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/sign-up">How it Works</a>
+            <a href="/sign-up">Testimonials</a>
+            <a href="/sign-up">Terms of service</a>
+        </div>
+        <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/sign-up">instagram</a>
+            <a href="/sign-up">facebook</a>
+            <a href="/sign-up">whatsapp</a>
+        </div>
+    </div>
+       </div>
+         <section class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo">Masjid Al Afiyah</a>
+                </div>
+                <p class="website__rights">Masjid Al Afiyah 2024. All rights resvered</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icon--link" target="_blank"
+                    ><i class="fab fa-facebook"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-instagram"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-youtube"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-linkedin"></i></a>
+  
+                    <a href="/" class="social__icon--link"  target="_blank"
+                    ><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+         </section>
+    </div>
+   </div>
+
+   <style>
+    /* footer CSS */
+ .footer__container {
+    background-color: #131313;
+    padding: 5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: center;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: 0.3 ease-out;
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+    transition: 0.3 ease-out;
+}
+
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.socail__media {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.website__rights {
+    color: #fff;
+}
+  
+
+   </style>
