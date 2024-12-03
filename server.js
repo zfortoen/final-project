@@ -13,3 +13,10 @@ menu.addEventListener('click', mobileMenu);
 const highlightMenu = () => {
   
 }
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
