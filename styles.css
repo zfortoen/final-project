@@ -101,7 +101,7 @@ body {
     color: #fff;
 }
 
-.bar{
+.fa-bar{
     color: #fff;
 }
 
@@ -158,12 +158,13 @@ body {
 }
 
 .active {
-    background-color: #000000;
+    background-color: #fff;
     color: #fff;
 }
 
-.topnav a:hover {
-    
+.fa-solid fa-bars {
+    position: relative;
+    color: #fff;
 }
 
 
@@ -210,7 +211,7 @@ body {
     }
 
     .active {
-        background-color: #000000;
+        background-color: #fff;
         color: #fff;
     }
 
@@ -518,9 +519,9 @@ body {
       justify-content: center;
       flex-direction: column;
       color: #fff;
-      background: #2980B9;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      
   }
 
